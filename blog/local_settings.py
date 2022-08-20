@@ -1,1 +1,0 @@
-SECRET_KEY = 'og41erup-s400vjflczy2n90g#2fs84df52f^zv@e*e))m^yoj'
