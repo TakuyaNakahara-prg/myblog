@@ -1,0 +1,30 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-info fixed-top">
+        <a class="navbar-brand" href="{% url 'polls:top' %}">ブログ</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'polls:index' %}">投稿一覧</a>
+                </li>
+                <li class="nav-item">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          カテゴリー
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
+                            {% for category in category_list %}
+                                <li><a class = 'dropdown-item' href = '{% url 'polls:category' category %}'>
+                                    {{ category.name }}
+                                </a></li>                               
+                            {% endfor %}
+                        </ul>
+                      </li>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+</header>

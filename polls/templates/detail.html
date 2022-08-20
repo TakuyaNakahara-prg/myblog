@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}ブログ{% endblock %}
+{% block content%}
+<div class = 'container'>
+    <h2>{{ article.title }}</h2>
+    <p>{{ article.date }} / <a href = '{% url 'polls:category' article.category %}'>{{ article.category }}</a></p>
+    <p>{{ article.text | safe }}</p>
+
+    <br></br>
+    <div class = 'relate-content'>
+        <h3>関連記事</h3>
+        <br></br>
+        {% if article.relate_article.all %}
+            <h4>関連記事はこちら</h4>
+            {% for re_article in article.relate_article.all %}
+            <div class = 'box'>
+                <div class = 'article'>
+                    <h5><a href = '{% url 'polls:detail' article.pk %}'>{{ re_article }}</a></h5>
+                    <br></br>
+                <p><a class = 'button' href = '{% url 'polls:detail' article.pk %}'>記事本文を見る</a></p>
+                <br>
+                <p>{{ article.date }}</p>
+                <p><a href = '{% url 'polls:category' article.category %}'>カテゴリー : {{ article.category }}</a></p>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+            <h4>関連記事はありません。</h4>
+        {% endif %}
+</div>
+
+{% endblock %}

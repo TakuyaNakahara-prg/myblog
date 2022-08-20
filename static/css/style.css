@@ -1,0 +1,84 @@
+header {
+    padding-bottom: 100px;
+}
+
+header .navbar-brand {
+    margin-left: 50px;
+}
+
+.container {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom:30px;
+}
+
+.container h3 {
+    text-align: center;
+    margin-bottom:30px;
+}
+
+.relate-content {
+    margin-bottom: 100px;
+}
+
+.relate-content h4 {
+    text-align: center;
+}
+
+.container h5 {
+    text-align: left;
+}
+
+.box {
+    text-align: center;
+    float: left;
+    width: 300px;
+    height: 300px;
+    margin: 20px 10px 10px 10px;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.16);
+    color: #212121;
+}
+
+a {
+    text-decoration: none;
+}
+
+.article {
+    display: inline-block;
+}
+
+.article {
+    text-align: center;
+}
+
+.article-title {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.button {
+    width: 100%;
+    display       : inline-block;
+    border-radius : 5%;          
+    font-size     : 18pt;       
+    text-align    : center; 
+    cursor        : pointer;    
+    padding       : 12px 12px; 
+    background    : #000066;   
+    color         : white;
+    line-height   : 1em;
+    transition    : .3s; 
+    border        : 2px solid #000066;
+  }
+
+  .button:hover {
+    box-shadow    : none; 
+    color         : #000066; 
+    background    : #ffffff;
+  }
