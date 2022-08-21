@@ -1,3 +1,0 @@
-docker ps : 利用コンテナの情報
-docker exec -it blog_app_web_1_bash : コンテナ内に入る
-docker-compose up : コンテナ起動
